@@ -69,7 +69,7 @@ create table voucher
     cheque_no int,
     constraint pk_voucher primary key(voucher_no),
     constraint fk_voucher_vender foreign key(vender_no) references vendor(vender_no) on delete set null,
-    constraint fk_voucher_cheque foreign key(cheque_no) references cheque(cheque_no) on delete set null
+    constraint fk_voucher_cheue foreign key(cheque_no) references cheque(cheque_no) on delete set null
 );
 
 /*Ordering relation creation*/
@@ -83,3 +83,24 @@ create table ordering
     constraint fk_ordering_item foreign key(item_code) references item(item_code) on delete set null
 );
 
+/*
+
+OUTPUT : 
+
+Table altered.
+
+1 row updated.
+
+1 row updated.
+
+1 row updated.
+
+1 row updated.
+
+1 row updated.
+
+1 row updated.
+
+1 row deleted.
+
+*/
