@@ -65,10 +65,10 @@ create table voucher
 (
     voucher_no int not null,
     voucher_date date,
-    vender_no int,
+    vendor_no int,
     cheque_no int,
     constraint pk_voucher primary key(voucher_no),
-    constraint fk_voucher_vender foreign key(vender_no) references vendor(vender_no) on delete set null,
+    constraint fk_voucher_vender foreign key(vendor_no) references vendor(vendor_no) on delete set null,
     constraint fk_voucher_cheue foreign key(cheque_no) references cheque(cheque_no) on delete set null
 );
 
